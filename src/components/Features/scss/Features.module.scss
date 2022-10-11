@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .features {
+        @apply bg-gray-100;
+        .new_container{
+            .new_row{
+                @apply flex ;
+                &:first-child{
+                    @apply px-12 py-24 md:w-1/2 ;
+                }
+                &:last-child{
+                    @apply hidden max-h-max bg-cover bg-center
+                    md:w-1/2 md:block;
+                }
+            }
+        }
+        
+    }
+}
+

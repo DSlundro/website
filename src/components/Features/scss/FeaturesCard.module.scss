@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .features_card{
+        @apply flex flex-col flex-wrap md:flex-row;
+        .item{
+            @apply py-6 pr-2 md:w-1/2;
+            .item_icon{
+                @apply text-secondary text-[35px] pb-1;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900%7cOpen+Sans:300,400,600,700,800');
+
+@layer base {
+    *{
+        @apply m-0 p-0 box-border;
+    }
+    
+    body{@apply font-primary text-primary;}
+    
+    h3{@apply text-[25px] font-[800];}
+    h4{@apply text-[24px] font-[600] font-secondary;}
+    h5{@apply text-[18px] font-[600];}
+    p{@apply text-light;}
+    
+    .image{
+        background-image: url(../src/assets/coding.jpg);
+    }
+}
