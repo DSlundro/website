@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classes from './scss/FeaturesCard.module.scss'
 
 
-export const Card = props => {
+export const FeaturesCard = props => {
     return (
         <div className={classes.features_card}>
                 {props.data.map( item => {
