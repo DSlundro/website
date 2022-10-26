@@ -1,5 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// Style
 import classes from './scss/FeaturesCard.module.scss'
+// Icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export const FeaturesCard = props => {

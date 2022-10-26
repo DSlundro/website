@@ -1,1 +1,0 @@
-export const randomKey = Math.ceil(Math.random() * 100000000000)
