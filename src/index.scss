@@ -6,10 +6,4 @@
 @layer base {
     *{ @apply m-0 p-0 box-border;}
     body{@apply font-primary text-primary;}
-    h3{@apply text-[28px] font-bold mb-4;}
-    h4{@apply text-[24px] font-semibold font-secondary;}
-    h5{@apply text-[18px] font-semibold;}
-    p{@apply text-light text-justify;}
-    img{@apply w-full;}
-    a{@apply text-primary font-semibold decoration-transparent;}
 }

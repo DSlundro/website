@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .jumbotron {
+        @apply min-h-screen 
+        bg-[url('../../../assets/bg.jpg')] bg-cover  bg-no-repeat bg-fixed bg-top;
+
+        *{
+            @apply flex justify-center items-center text-white text-center;
+            padding: 8px!important;
+        }
+        
+        .ui_container {
+            @apply h-screen;
+
+            .ui_row {
+                @apply flex-col;
+            }
+        }
+    }
+
+    .avatar {
+        @apply w-44 rounded-full p-[5px] 
+        border-[5px] border-white border-solid
+        hover:border-secondary #{!important};
+    }
+
+    .socials {
+        *{padding: 0!important;}
+        .link{
+            @apply mx-3;
+        &:hover path{
+            @apply hover:text-secondary;
+        }
+        }
+    }
+}

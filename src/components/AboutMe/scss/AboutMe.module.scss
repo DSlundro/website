@@ -1,0 +1,15 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@layer components {
+    .ui_row {
+        @apply md:my-24;
+
+        .ui_column {
+            @apply md:w-1/2 md:py-24 px-12;
+        }
+    }
+}

@@ -1,27 +1,30 @@
 // Style
-import classes from './scss/Features.module.scss'
+import classes from './scss/Features.module.scss';
 // Immagine
 import responsive from '../../assets/responsive.jpg';
-// Componenti
+// Componenti UI
 import { Section } from './../UI/Section';
 import { Container } from './../UI/Container';
 import { Row } from './../UI/Row';
 import { Column } from './../UI/Column';
-import { features } from "../../Storage/features";
-import { FeaturesCard } from './FeaturesCard';
+import { Title } from '../UI/Title';
 import { Image } from './../UI/Image';
+// Componenti
+import { FeaturesCard } from './FeaturesCard';
+// Data
+import { features } from "../../Data/features";
 
 
-const Features = props => {
+export const Features = () => {
     
     return (
         <Section className={classes.features}>
             <Container>
                 <Row>
                     <Column className={classes.features_text}>
-                        <h3>
-                            La migliore creatività è il risultato di buone abitudini lavorative.
-                        </h3>
+                        <Title
+                            text='La migliore creatività è il risultato di buone abitudini lavorative.'
+                        />
                         <FeaturesCard data={features}/>
                     </Column>
 
@@ -36,4 +39,3 @@ const Features = props => {
         </Section>
     )
 };
-export default Features;

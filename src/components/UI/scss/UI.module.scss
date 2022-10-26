@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .ui_section {
+
+        .ui_container {
+            @apply container max-w-7xl m-auto;
+    
+            .ui_row {
+                @apply flex flex-col flex-wrap py-24 
+                md:py-0 md:px-12 md:flex-row;
+                
+                .ui_column {
+                    @apply p-4;
+                }
+            }
+        }
+    }
+
+    .ui_overlay {
+        @apply bg-red-600 z-10;
+    }
+
+    .ui_button {
+        @apply px-10 py-3 rounded-full font-bold
+        bg-secondary text-white border border-secondary
+        hover:bg-white hover:text-secondary hover:border;
+    }
+
+    .ui_link {
+        @apply text-primary font-semibold decoration-transparent
+        hover:font-bold;
+    }
+
+    .ui_paragraph {
+        @apply text-light text-justify;
+    }
+
+    .ui_image {
+        @apply w-full;
+    }
+
+    .ui_title {
+        @apply text-3xl font-bold mb-4;;
+    }
+
+    .ui_subtitle {
+        @apply text-[24px] font-semibold font-secondary;
+    }
+}

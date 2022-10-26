@@ -1,3 +1,5 @@
+import classes from './scss/UI.module.scss'
+
 
 export const Button = props => {
 
@@ -5,12 +7,8 @@ export const Button = props => {
         <button
             href={props.href}
             target={props.target}
-            className={`
-            px-10 py-3 rounded-full font-bold
-            bg-secondary text-white border border-secondary
-            hover:bg-white hover:text-secondary hover:border
-            ${props.className}`
-        }>
+            className={`${props.className !== undefined ? props.className : ''} ${classes.ui_button}`}
+        >
             {props.text}
         </button>
     )
