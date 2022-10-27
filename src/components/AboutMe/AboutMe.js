@@ -12,7 +12,7 @@ import { Link } from '../UI/Link';
 import { Image } from '../UI/Image';
 import { Paragraph } from './../UI/Paragraph';
 
-export const AboutMe = () => {
+const AboutMe = () => {
     return(
         <Section id='info'>
             <Container>
@@ -48,3 +48,4 @@ export const AboutMe = () => {
         </Section>
     )
 }
+export default AboutMe;

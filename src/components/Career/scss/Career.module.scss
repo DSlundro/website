@@ -1,0 +1,16 @@
+@import "tailwindcss/components";
+
+
+@layer components {
+    .career_section {
+        @apply bg-[url('../../../assets/bg.jpg')] bg-cover bg-top bg-no-repeat bg-fixed relative
+        md:py-32;
+        
+        .career_column {
+            @apply flex flex-col justify-between w-full 
+            md:flex-row md:items-center
+            ;
+        }
+    }
+    
+}

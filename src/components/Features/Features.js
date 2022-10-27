@@ -15,7 +15,7 @@ import { FeaturesCard } from './FeaturesCard';
 import { features } from "../../Data/features";
 
 
-export const Features = () => {
+const Features = () => {
     
     return (
         <Section id='servizi' className={classes.features}>
@@ -39,3 +39,4 @@ export const Features = () => {
         </Section>
     )
 };
+export default Features;
