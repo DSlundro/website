@@ -10,7 +10,7 @@
 
         .nav_navbar {
             @apply p-4
-            md:flex md:items-center md:justify-end;
+            md:flex md:items-center md:justify-end md:py-6;
 
             .nav_icon {
                 @apply text-4xl text-white absolute right-8 top-6 cursor-pointer flex justify-center items-center

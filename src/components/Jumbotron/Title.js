@@ -5,6 +5,7 @@ const Title = props => {
     return (
         <Column>
             <Paragraph
+                className={props.classes.title}
                 text='Junior Full Stack Web Developer'
             />
         </Column>

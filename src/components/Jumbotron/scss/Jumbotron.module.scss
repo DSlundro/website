@@ -33,6 +33,10 @@
         @apply text-secondary font-bold text-[48px] leading-tight;
     }
 
+    .title {
+        @apply text-base mt-[-30px];
+    }
+
     .particelle {
         padding: 0 !important;
         @apply absolute h-screen min-w-full;
@@ -41,7 +45,7 @@
     .socials {
         *{padding: 0!important;}
         .link{
-            @apply mx-3;
+            @apply text-xl mx-3 mt-5;
 
             &:hover path{
                 @apply hover:text-secondary;

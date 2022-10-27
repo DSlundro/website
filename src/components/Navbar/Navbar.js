@@ -52,7 +52,6 @@ const Navbar = props => {
         }
     },[screenPosition])
     
-    console.log('ciao');
 
     return (
         <>
