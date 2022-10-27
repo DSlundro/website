@@ -36,7 +36,7 @@ const Particelle = props => {
                     },
                     modes: {
                         push: {
-                            quantity: 1,
+                            quantity: 0,
                             },
                         repulse: {
                             distance: 200,
@@ -88,6 +88,7 @@ const Particelle = props => {
                 zLayers: 10,
                 autoPlay: true,
                 fullScreen: false,
+                
             }
         }
     />

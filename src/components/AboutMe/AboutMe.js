@@ -14,7 +14,7 @@ import { Paragraph } from './../UI/Paragraph';
 
 export const AboutMe = () => {
     return(
-        <Section>
+        <Section id='info'>
             <Container>
                 <Row className={classes.ui_row}>
                     <Column className={classes.ui_column}>

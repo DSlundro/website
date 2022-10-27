@@ -1,0 +1,34 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    .nav_section {
+        @apply w-full fixed top-0 z-[99999] container px-12
+        md:right-1/2 md:translate-x-[50%] max-w-7xl
+        ;
+
+        .nav_navbar {
+            @apply p-4
+            md:flex md:items-center md:justify-end;
+
+            .nav_icon {
+                @apply text-4xl text-white absolute right-8 top-6 cursor-pointer flex justify-center items-center
+                md:hidden;
+            }
+            .nav_ul {
+                @apply absolute transition-all duration-500 ease-in opacity-0 bg-transparent z-[-1] w-full left-0 pl-9
+                md:flex md:items-center md:pb-0 md:static md:z-auto md:w-auto md:pl-0 md:opacity-100 ;
+
+                .nav_li {
+                    @apply text-base uppercase list-none my-7
+                    md:ml-8 md:my-0;
+
+                    .nav_link {
+                        @apply text-white no-underline;
+                    }
+                }
+            }
+        }
+    }
+}

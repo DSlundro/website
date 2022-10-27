@@ -20,7 +20,9 @@
     }
 
     .ui_overlay {
-        @apply bg-red-600 z-10;
+        @apply fixed bg-black opacity-80 z-[99999] h-screen w-full
+        transition-all duration-500
+        ;
     }
 
     .ui_button {

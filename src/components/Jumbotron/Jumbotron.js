@@ -17,7 +17,7 @@ import ScrollArrow from './ScrollArrow';
 const Jumbotron = props => {
 
     return (
-        <Section className={classes.jumbotron}>
+        <Section id='home' className={classes.jumbotron}>
             <Particelle classes={classes}/>
             <Container className={classes.ui_container}>
                 <Row className={classes.ui_row}>

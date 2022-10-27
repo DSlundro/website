@@ -18,7 +18,7 @@ import { features } from "../../Data/features";
 export const Features = () => {
     
     return (
-        <Section className={classes.features}>
+        <Section id='servizi' className={classes.features}>
             <Container>
                 <Row>
                     <Column className={classes.features_text}>

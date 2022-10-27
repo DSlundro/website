@@ -4,6 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900%7cOpen+Sans:300,400,600,700,800');
 
 @layer base {
-    *{ @apply m-0 p-0 box-border;}
+    *{ @apply m-0 p-0 box-border scroll-smooth;}
     body{@apply font-primary text-primary;}
 }
