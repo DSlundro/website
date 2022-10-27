@@ -48,4 +48,22 @@
             }
         }
     }
+
+    .scroll_arrow{
+        @apply absolute bottom-8 text-5xl;
+        animation: up-down 2s forwards ease-in-out infinite;
+    }
+    
+    @keyframes up-down {
+        0% {
+            transform: translateY(-50px)scale(1);
+            opacity: 1;
+            }
+            
+        100% {
+            transform: translateY(0px)scale(1.2);
+            opacity: 0.0
+            
+        }
+    }
 }

@@ -11,7 +11,7 @@ const Particelle = props => {
 
     return (
         <Particles
-            className={props.className}
+            className={props.classes.particelle}
             id="tsparticles"
             init={particlesInit}
             options={{

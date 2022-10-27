@@ -10,21 +10,22 @@ import Name from './Name';
 import Title from './Title';
 import Socials from './Socials';
 import Particelle from './Particelle';
+import ScrollArrow from './ScrollArrow';
 
 
 
 const Jumbotron = props => {
 
-
     return (
         <Section className={classes.jumbotron}>
-            <Particelle className={classes.particelle}/>
+            <Particelle classes={classes}/>
             <Container className={classes.ui_container}>
                 <Row className={classes.ui_row}>
                     <Avatar classes={classes} />
                     <Name classes={classes}/>
-                    <Title />
+                    <Title classes={classes}/>
                     <Socials classes={classes}/>
+                    <ScrollArrow classes={classes}/>
                 </Row>
             </Container>
         </Section>
