@@ -22,9 +22,10 @@
     }
 
     .avatar {
-        @apply w-44 rounded-full p-[5px] 
-        border-[5px] border-white border-solid
-        hover:border-secondary #{!important};
+        padding: 5px !important;
+        @apply w-44 rounded-full 
+        border-white border-solid border-[5px]
+        hover:border-secondary;
 
     }
     
@@ -33,6 +34,7 @@
     }
 
     .particelle {
+        padding: 0 !important;
         @apply absolute h-screen min-w-full;
     }
 
