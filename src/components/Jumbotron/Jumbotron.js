@@ -9,11 +9,16 @@ import Avatar from './Avatar';
 import Name from './Name';
 import Title from './Title';
 import Socials from './Socials';
+import Particelle from './Particelle';
+
 
 
 const Jumbotron = props => {
+
+
     return (
         <Section className={classes.jumbotron}>
+            <Particelle className={classes.particelle}/>
             <Container className={classes.ui_container}>
                 <Row className={classes.ui_row}>
                     <Avatar classes={classes} />

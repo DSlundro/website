@@ -16,7 +16,7 @@
             @apply h-screen;
 
             .ui_row {
-                @apply flex-col;
+                @apply flex-col z-50;
             }
         }
     }
@@ -29,7 +29,11 @@
     }
     
     .name {
-        @apply text-secondary font-bold text-[48px];
+        @apply text-secondary font-bold text-[48px] leading-tight;
+    }
+
+    .particelle {
+        @apply absolute h-screen min-w-full;
     }
 
     .socials {
