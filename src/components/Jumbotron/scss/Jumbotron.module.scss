@@ -25,15 +25,21 @@
         @apply w-44 rounded-full p-[5px] 
         border-[5px] border-white border-solid
         hover:border-secondary #{!important};
+
+    }
+    
+    .name {
+        @apply text-secondary font-bold text-[48px];
     }
 
     .socials {
         *{padding: 0!important;}
         .link{
             @apply mx-3;
-        &:hover path{
-            @apply hover:text-secondary;
-        }
+
+            &:hover path{
+                @apply hover:text-secondary;
+            }
         }
     }
 }
