@@ -3,6 +3,7 @@ import Features from "./components/Features/Features";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Navbar from "./components/Navbar/Navbar";
 import Career from './components/Career/Career';
+import Map from "./components/Map/Map";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <AboutMe />
             <Features />
             <Career />
+            <Map /> 
         </>
     );
 }
