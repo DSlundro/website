@@ -15,11 +15,7 @@ const Map = () => {
             center={center}
             mapContainerClassName='w-full h-[400px]'
             mapTypeId="hybrid"
-        >
-            <Marker 
-                position={center}
-            />
-        </GoogleMap>
+        />
     );
 }
 export default Map;
