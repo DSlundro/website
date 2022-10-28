@@ -1,0 +1,20 @@
+@import "tailwindcss/components";
+
+@layer components {
+
+    .pag_nav {
+        @apply flex justify-center -space-x-px;
+
+        .pag_list {
+            @apply flex list-none py-4 ;
+
+            .pag_link {
+                @apply py-2 px-3 leading-tight no-underline border-solid
+                bg-primary border-gray-700 text-gray-400 
+                focus:bg-black focus:text-white
+                hover:bg-black hover:text-white;
+            }
+        }
+    }
+
+}

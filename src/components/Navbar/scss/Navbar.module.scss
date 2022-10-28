@@ -1,12 +1,10 @@
-@import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 @layer components {
     .nav_section {
-        @apply w-full fixed top-0 z-[99999] container px-12
-        md:right-1/2 md:translate-x-[50%] max-w-7xl
-        ;
+        @apply w-full fixed top-0 z-[99999] container px-12 max-w-7xl
+        md:right-1/2 md:translate-x-[50%] md:shadow-2xl
+        xl:rounded-bl-[50px] xl:rounded-br-[50px];
 
         .nav_navbar {
             @apply p-4

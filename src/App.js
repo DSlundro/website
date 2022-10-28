@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Career from './components/Career/Career';
 import Map from "./components/Map/Map";
 import Footer from "./components/Footer/Footer";
+import Works from './components/Works/Works';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <AboutMe />
                 <Features />
                 <Career />
+                <Works />
                 <Map /> 
             </main>
             <footer>
