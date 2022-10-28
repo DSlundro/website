@@ -67,7 +67,7 @@ const Navbar = props => {
                         className={classes.nav_icon}>
                         <span >
                         <FontAwesomeIcon
-                            className={`${scrollPosition > screenPosition ? '!text-black' : 'text-white'}`}
+                            className={`${open ? '!text-white' : (scrollPosition > screenPosition ? '!text-black' : 'text-white')}`}
                             onClick={onMenuToggle}
                             icon={open ? faXmark : faBars}
                         />
