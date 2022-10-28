@@ -9,9 +9,11 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
+    "@react-google-maps/api": "^2.13.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "env-cmd": "^10.1.0",
     "i": "^0.3.7",
     "npm": "^8.19.2",
     "react": "^18.2.0",
@@ -24,8 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd react-scripts start",
+    "build": "env-cmd react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,6 +51,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "dotenv": "^16.0.3",
     "postcss": "^8.4.17",
     "postcss-nested": "^6.0.0",
     "sass": "^1.55.0",
