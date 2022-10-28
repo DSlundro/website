@@ -3,4 +3,5 @@ export const links = [
     {name: 'Info', link: '#info'},
     {name: 'Servizi', link: '#servizi'},
     {name: 'Progetti', link: '#progetti'},
+    {name: 'Mappa', link: '#map'},
 ]

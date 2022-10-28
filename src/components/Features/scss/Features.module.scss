@@ -6,9 +6,11 @@
     .features {
     @apply bg-gray-100 md:py-24;
         .features_text{
-            @apply order-2 md:order-1
+            @apply text-center order-2 md:order-1
             md:w-1/2 md:px-6;
-            p{@apply md:pr-6 text-left;}
+            p{@apply text-center
+                md:pr-6 md:text-left;
+            }
         }
         .features_image{
             @apply p-0 m-0 flex items-center justify-center 
