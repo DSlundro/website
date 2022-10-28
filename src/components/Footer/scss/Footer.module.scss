@@ -1,0 +1,28 @@
+@import "tailwindcss/components";
+
+
+@layer components {
+    .footer_section {
+        @apply bg-primary md:py-16;
+
+        .footer_row {
+            flex-direction: column!important;
+            @apply md:gap-5 md:justify-center md:items-center;
+
+            .footer_socials {
+                @apply flex justify-center items-center gap-[10%] 
+                md:gap-[50px];
+
+                .footer_icon {
+                    @apply text-white w-6 h-6
+                    hover:text-secondary hover:translate-y-[-10px] duration-300 ease-in;
+                }
+
+            }
+            .footer_copyright {
+                @apply flex flex-col justify-center items-center gap-3
+                md:flex-row md:gap-[40px];
+            }
+        }
+    }
+}
