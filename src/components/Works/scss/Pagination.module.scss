@@ -3,16 +3,19 @@
 @layer components {
 
     .pag_nav {
-        @apply flex justify-center -space-x-px;
+        @apply flex justify-center ;
 
         .pag_list {
-            @apply flex list-none py-4 ;
+            @apply flex list-none py-4  gap-1;
 
-            .pag_link {
-                @apply py-2 px-3 leading-tight no-underline border-solid
-                bg-primary border-gray-700 text-gray-400 
-                focus:bg-black focus:text-white
-                hover:bg-black hover:text-white;
+            .pag_item {
+                @apply w-full;
+
+                .pag_link {
+                    @apply no-underline px-2 py-[2px] rounded
+                    bg-primary text-gray-400
+                    hover:bg-black hover:text-white  ;
+                }
             }
         }
     }

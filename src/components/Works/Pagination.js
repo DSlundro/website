@@ -15,7 +15,10 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
                 {
                     pageNumbers.map( number => {
                         return (
-                            <li key={number}>
+                            <li 
+                                className={classes.pag_item}
+                                key={number}
+                            >
                                 <a
                                     href="!#"
                                     className={classes.pag_link}

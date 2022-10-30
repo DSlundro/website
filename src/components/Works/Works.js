@@ -16,7 +16,6 @@ const Works = () => {
 
     useEffect(() => {
             setWorks(worksList);
-
     }, [])
     
     // Get current works
@@ -29,7 +28,7 @@ const Works = () => {
     const paginate = (pageNumber) => {setCurrentPage(pageNumber)}
 
     return (
-        <Section>
+        <Section id='progetti'>
             <Container>
                 <Row className='md:!p-24 px-4 flex justify-center gap-4'>
                     <WorkCard 

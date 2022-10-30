@@ -6,24 +6,30 @@ import { Link } from '../UI/Link'
 const WorkLinks = props => {
     return (
         <div className={props.classes.card_icons}>
-            <Link
-                href={props.work.linkWeb}
-                target='_blank'
-            >
-                <FontAwesomeIcon 
-                    className={props.classes.card_icon}
-                    icon={faEye}
-                />
-            </Link>
-            <Link
-                href={props.work.linkGithub}
-                target='_blank'
-            >
-                <FontAwesomeIcon 
-                    className={props.classes.card_icon}
-                    icon={faGithub}
-                />
-            </Link>
+            {
+                props.work.linkWeb &&
+                <Link
+                    href={props.work.linkWeb}
+                    target='_blank'
+                >
+                    <FontAwesomeIcon 
+                        className={props.classes.card_icon}
+                        icon={faEye}
+                    />
+                </Link>
+            }
+            {
+                props.work.linkGithub &&
+                <Link
+                    href={props.work.linkGithub}
+                    target='_blank'
+                >
+                    <FontAwesomeIcon 
+                        className={props.classes.card_icon}
+                        icon={faGithub}
+                    />
+                </Link>
+            }
         </div>
     )
 }

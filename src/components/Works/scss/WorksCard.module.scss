@@ -3,53 +3,70 @@
 @layer components {
 
     .card {
-        @apply relative flex justify-center flex-col gap-y-5
-        md:flex-row md:gap-7 md:flex-wrap
-        ;
+        @apply relative flex justify-start flex-col gap-y-5
+        md:flex-row md:gap-7 md:flex-wrap;
+
+        img{
+            height: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            box-shadow: 0 2px 12px rgb(95, 95, 95);
+        }
 
         .card_overlay {
             @apply bg-primary opacity-0 absolute duration-500
-            top-3 left-3 right-3 bottom-4
-            -translate-x-1 translate-y-1;
+            top-[4%] left-[3%] w-[94%] h-[92%] p-[4%]
+            -translate-x-2 -translate-y-2
+            flex flex-col justify-between
         }
 
         .card_list {
-            @apply list-none relative
+            @apply list-none relative duration-300 ease-in
             md:max-w-[30%];
 
+            &:hover{
+                @apply -translate-y-2;
+            }
             &:hover .card_title,
             &:hover .card_tech,
             &:hover .card_icon {
                 @apply translate-y-0 translate-x-0 opacity-100;
             }
             &:hover .card_overlay {
-                @apply opacity-90 translate-x-0 translate-y-0;
+                @apply opacity-90 translate-x-0 -translate-y-[1%];
             }
+            &:hover img{
+                box-shadow: 0 2px 30px 1px rgb(109, 109, 109);
+            }
+            
         }
 
         .card_text {
-            @apply absolute bottom-0 p-4;
+            @apply relative;
 
         }
         .card_title {
-            @apply mb-2 opacity-0 font-bold text-2xl text-white
-            -translate-y-4 duration-500 ease-in-out 
+            @apply m-0 opacity-0 font-bold text-white
+            -translate-y-4 duration-500 ease-in-out
+            text-2xl md:text-base lg:text-xl xl:text-2xl
             ;
         }
 
         .card_tech {
-            @apply text-white opacity-0 translate-y-4 font-thin duration-500 ease-in-out;
+            @apply text-white opacity-0 translate-y-4 font-thin duration-500 ease-in-out
+            text-base md:text-xs lg:text-sm xl:text-base;
         }
 
         .card_icons {
-            @apply absolute right-4 top-4 flex gap-5;
+            @apply relative overflow-hidden text-end;
 
         }
         .card_icon {
-            @apply w-6 h-6 p-3 text-white cursor-pointer opacity-0
+            @apply p-[2%] text-white cursor-pointer opacity-0 mx-1
             border-2 border-solid border-white rounded-full
             hover:bg-secondary
-            -translate-y-4 translate-x-4 duration-500 ease-in-out;
+            -translate-y-4 translate-x-4 duration-500 ease-in-out
+            text-base md:text-xs lg:text-sm xl:text-base;
         }
 
     }
