@@ -3,26 +3,19 @@ import { useState } from 'react';
 
 
 const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
-    const [id, setId] = useState({
-        active: null,
-        objects: [{id: 1}, {id: 2}, {id: 3}, {id: 4}]
-    });
+    const [active, setActive] = useState(0);
 
-    const toggleActive = index => {
-        setId({...id, active: id.objects[index] })
+    const setActiveHandler = index => {
+        if(active === index) return '!text-white !bg-black';
     }
-
-    const toggleActiveClass = index => {
-        if(id.objects[index] === id.active) return '!text-white !bg-black';
-    }
-
-    const pageNumbers = []
+    
     const pages = Math.ceil(totalWorks / worksPerPage)
+    const pageNumbers = []
 
     for(let i = 1; i <= pages; i++) {
         pageNumbers.push(i)
     }
-
+console.log('ciao');
     return (
         <nav className={classes.pag_nav}>
             <ul className={classes.pag_list}>
@@ -35,10 +28,10 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
                             >
                                 <a
                                     href="!#"
-                                    className={`${toggleActiveClass(index)} ${classes.pag_link}`}
+                                    className={`${setActiveHandler(index)} ${classes.pag_link}`}
                                     onClick={(e) =>{
-                                        toggleActive(index)
                                         e.preventDefault()
+                                        setActive(index)
                                         paginate(number)
                                     }}
                                 >
