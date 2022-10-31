@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 
 const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
-    const [active, setActive] = useState(0);
+    const [isActive, setIsActive] = useState(0);
 
     const setActiveHandler = index => {
-        if(active === index) return '!text-white !bg-black';
+        if(isActive === index) return '!text-white !bg-black';
     }
     
     const pages = Math.ceil(totalWorks / worksPerPage)
@@ -31,7 +31,7 @@ console.log('ciao');
                                     className={`${setActiveHandler(index)} ${classes.pag_link}`}
                                     onClick={(e) =>{
                                         e.preventDefault()
-                                        setActive(index)
+                                        setIsActive(index)
                                         paginate(number)
                                     }}
                                 >
