@@ -181,16 +181,6 @@ export const worksList = [
         linkWeb: `https://dslundro-bankist-app.netlify.app`,
     },
     {
-        id: 17,
-        image: require(`../assets/works/JavaScript/bankist-website.png`),
-        title: `Bankist Website`,
-        technology: `JavaScript`,
-        tech_id: techs.javascript,
-        techs: `HTML, CSS, JavaScript`,
-        linkGithub: `https://github.com/DSlundro/bankist-website`,
-        linkWeb: `https://dslundro-bankist-website.netlify.app`,
-    },
-    {
         id: 18,
         image: require(`../assets/works/JavaScript/mapty-app.png`),
         title: `Mapty App`,
@@ -229,5 +219,15 @@ export const worksList = [
         techs: `HTML, CSS, JavaScript, React, Three.js`,
         linkGithub: `https://github.com/DSlundro/react-minecraft`,
         linkWeb: `https://dslundro-minecraft.netlify.app`,
+    },
+    {
+        id: 22,
+        image: require(`../assets/works/JavaScript/bankist-website.png`),
+        title: `Bankist Website`,
+        technology: `JavaScript`,
+        tech_id: techs.javascript,
+        techs: `HTML, CSS, JavaScript`,
+        linkGithub: `https://github.com/DSlundro/bankist-website`,
+        linkWeb: `https://dslundro-bankist-website.netlify.app`,
     },
 ]

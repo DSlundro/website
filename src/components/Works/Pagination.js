@@ -1,7 +1,21 @@
 import classes from './scss/Pagination.module.scss'
+import { useState } from 'react';
 
 
 const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
+    const [id, setId] = useState({
+        active: null,
+        objects: [{id: 1}, {id: 2}, {id: 3}, {id: 4}]
+    });
+
+    const toggleActive = index => {
+        setId({...id, active: id.objects[index] })
+    }
+
+    const toggleActiveClass = index => {
+        if(id.objects[index] === id.active) return '!text-white !bg-black';
+    }
+
     const pageNumbers = []
     const pages = Math.ceil(totalWorks / worksPerPage)
 
@@ -13,7 +27,7 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
         <nav className={classes.pag_nav}>
             <ul className={classes.pag_list}>
                 {
-                    pageNumbers.map( number => {
+                    pageNumbers.map( (number, index) => {
                         return (
                             <li 
                                 className={classes.pag_item}
@@ -21,8 +35,9 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
                             >
                                 <a
                                     href="!#"
-                                    className={classes.pag_link}
+                                    className={`${toggleActiveClass(index)} ${classes.pag_link}`}
                                     onClick={(e) =>{
+                                        toggleActive(index)
                                         e.preventDefault()
                                         paginate(number)
                                     }}
