@@ -15,7 +15,7 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
     for(let i = 1; i <= pages; i++) {
         pageNumbers.push(i)
     }
-console.log('ciao');
+
     return (
         <nav className={classes.pag_nav}>
             <ul className={classes.pag_list}>
