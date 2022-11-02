@@ -22,7 +22,8 @@
         }
 
         .card_list {
-            @apply bg-[url('../../../../assets/placeholder.jpg')] bg-cover bg-center aspect-video list-none relative duration-300 ease-in
+            @apply bg-[url('../../../../assets/placeholder.jpg')] bg-cover bg-center aspect-video 
+            list-none relative duration-300 ease-in
             w-[330px] md:w-[250px] lg:w-[320px]
             ;
 
