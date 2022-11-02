@@ -3,35 +3,48 @@ import { useState, useEffect } from "react"
 // Componenti
 import WorkCard from './WorkCard';
 import Pagination from "./Pagination";
-// Data
-import { worksList } from '../../Data/works';
 import { Section } from './../UI/Section';
 import { Container } from './../UI/Container';
 import { Row } from './../UI/Row';
 import { Title } from "../UI/Title";
+import SelectingList from "./SelectingList";
+// Data
+import { worksList } from '../../Data/works';
 
 
 const Works = () => {
     const [works, setWorks] = useState([]);
-    const [currentWorks, setCurrentWorks] = useState([])
+    const [totalWorks, setTotalWorks] = useState();
+    const [currentWorks, setCurrentWorks] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [worksPerPage] = useState(9);
+    const [worksPerPage] = useState(6);
+    const [selectedTech, setSelectedTech] = useState(0);
 
+    const indexOfLastWork = currentPage * worksPerPage;
+    const indexOfFirstPost = indexOfLastWork - worksPerPage;
+
+    // Get all works
     useEffect(() => {
-            setWorks(worksList);
-    },[])
-
-    const totalWorks = works.length
+        const filteredWorks = worksList.filter( work => work.tech_id === selectedTech)
+        setWorks(selectedTech ? filteredWorks : worksList)
+    },[selectedTech])
+    
+    // Get number of total works
+    useEffect(() => {
+        setTotalWorks(works.length)
+    },[works])
     
     // Get current works
     useEffect(() => {
-        const indexOfLastWork = currentPage * worksPerPage;
-        const indexOfFirstPost = indexOfLastWork - worksPerPage;
         setCurrentWorks(works.slice(indexOfFirstPost, indexOfLastWork))
-    },[works, currentPage, worksPerPage])
+    },[works, indexOfFirstPost, indexOfLastWork])
 
     // Change page
     const paginate = (pageNumber) => {setCurrentPage(pageNumber)}
+
+    // Change tech
+    const selectingTech = (selectedTech) => {setSelectedTech(selectedTech)}
+
 
     return (
         <Section id='progetti'>
@@ -40,6 +53,9 @@ const Works = () => {
                     <Title
                         className='pb-7 !text-[46px] uppercase'
                         text='Progetti'
+                    />
+                    <SelectingList
+                        selectedTech={selectingTech}
                     />
                     <WorkCard 
                         currentWorks={currentWorks}
