@@ -199,7 +199,7 @@ export const worksList = [
         tech_id: techs.javascript,
         techs: `HTML, CSS, JavaScript`,
         linkGithub: `https://github.com/DSlundro/forkify-app`,
-        linkWeb: ``,
+        linkWeb: null,
     },
     {
         id: 20,
@@ -231,5 +231,14 @@ export const worksList = [
         linkGithub: `https://github.com/DSlundro/bankist-website`,
         linkWeb: `https://dslundro-bankist-website.netlify.app`,
     },
+    {
+        id: 23,
+        image: require(`../assets/works/React/portfolio.png`),
+        title: `Portfolio`,
+        tech: `React`,
+        tech_id: techs.react,
+        techs: `HTML, CSS, JavaScript, Sass, Tailwind, React`,
+        linkGithub: null,
+        linkWeb: null,
+    },
 ]
-//console.log(new Set(worksList.map( val => val.tech)));
