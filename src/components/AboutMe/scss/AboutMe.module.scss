@@ -5,11 +5,15 @@
 
 
 @layer components {
-    .ui_row {
-        @apply md:my-24;
+    .info_container {
+        @apply translate-y-6;
 
-        .ui_column {
-            @apply md:w-1/2 md:py-24 px-12;
+        .info_row {
+            @apply md:my-24;
+    
+            .info_column {
+                @apply md:w-1/2 md:py-24 px-12;
+            }
         }
     }
 }

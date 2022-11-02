@@ -17,19 +17,19 @@ const AboutMe = () => {
     return(
     <Section id='info'>
         <AnimationOnScroll
-            animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+            animateIn='scroll_animation'
             animateOnce={true}
         >
-            <Container>
-                <Row className={classes.ui_row}>
-                    <Column className={classes.ui_column}>
+            <Container className={classes.info_container}>
+                <Row className={classes.info_row}>
+                    <Column className={classes.info_column}>
                         <Image
                             src={profile} 
                             alt='profile'
                         />
                     </Column>
 
-                    <Column className={classes.ui_column}>
+                    <Column className={classes.info_column}>
                         <Title text='Junior Full Stack Web Developer'/>
                         <Paragraph>
                             La mia passione per la programmazione emerge durante le superiori, dove ho avuto la possibilità di avvicinarmi e conoscere questo nuovo mondo.<br/> 
