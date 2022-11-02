@@ -11,10 +11,15 @@ import { Title } from '../UI/Title';
 import { Link } from '../UI/Link';
 import { Image } from '../UI/Image';
 import { Paragraph } from './../UI/Paragraph';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const AboutMe = () => {
     return(
-        <Section id='info'>
+    <Section id='info'>
+        <AnimationOnScroll
+            animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+            animateOnce={true}
+        >
             <Container>
                 <Row className={classes.ui_row}>
                     <Column className={classes.ui_column}>
@@ -45,7 +50,8 @@ const AboutMe = () => {
                     </Column>
                 </Row>
             </Container>
-        </Section>
+        </AnimationOnScroll>
+    </Section>
     )
 }
 export default AboutMe;

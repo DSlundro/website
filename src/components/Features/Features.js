@@ -13,12 +13,17 @@ import { Image } from './../UI/Image';
 import { FeaturesCard } from './FeaturesCard';
 // Data
 import { features } from "../../Data/features";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 const Features = () => {
     
     return (
         <Section id='servizi' className={classes.features}>
+            <AnimationOnScroll
+                animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+                animateOnce={true}
+            >
             <Container>
                 <Row>
                     <Column className={classes.features_text}>
@@ -36,7 +41,8 @@ const Features = () => {
                     </Column>
                 </Row>
             </Container>
-        </Section>
+        </AnimationOnScroll>
+    </Section>
     )
 };
 export default Features;

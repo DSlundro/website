@@ -13,6 +13,7 @@ import SelectingList from "./SelectingList";
 import { worksList } from '../../Data/works';
 // Style
 import classes from './scss/Works.module.scss'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 const Works = () => {
@@ -51,25 +52,30 @@ const Works = () => {
 
     return (
         <Section id='progetti'>
-            <Container>
-                <Row className={classes.works_row}>
-                    <Title
-                        className={classes.works_title}
-                        text='Progetti'
-                    />
-                    <SelectingList
-                        selectedTech={selectingTech}
-                    />
-                    <WorkCard 
-                        currentWorks={currentWorks}
-                    />
-                    <Pagination 
-                        worksPerPage={worksPerPage}
-                        totalWorks={totalWorks}
-                        paginate={paginate}
-                    />
-                </Row>
-            </Container>
+                <AnimationOnScroll
+                    animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+                    animateOnce={true}
+                >
+                <Container>
+                    <Row className={classes.works_row}>
+                        <Title
+                            className={classes.works_title}
+                            text='Progetti'
+                        />
+                        <SelectingList
+                            selectedTech={selectingTech}
+                        />
+                        <WorkCard 
+                            currentWorks={currentWorks}
+                        />
+                        <Pagination 
+                            worksPerPage={worksPerPage}
+                            totalWorks={totalWorks}
+                            paginate={paginate}
+                        />
+                    </Row>
+                </Container>
+            </AnimationOnScroll>
         </Section>
     )
 }

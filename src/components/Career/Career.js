@@ -12,6 +12,7 @@ import CareerName from './CareerName';
 // Data
 import { careers } from '../../Data/careers';
 import { Overlay } from './../UI/Overlay';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 
@@ -20,6 +21,10 @@ const Career = props => {
     return (
         <Section className={classes.career_section}>
             <Overlay className='!absolute top-0 !h-full !z-0'/>
+            <AnimationOnScroll
+                animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+                animateOnce={true}
+            >
             <Container className='!z-10 relative'>
                 <Row className='flex'>
                     <Column className={classes.career_column}>
@@ -40,7 +45,8 @@ const Career = props => {
                     </Column>
                 </Row>
             </Container>
-        </Section>
+        </AnimationOnScroll>
+    </Section>
     )
 }
 export default Career;
