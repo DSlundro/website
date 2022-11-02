@@ -1,5 +1,8 @@
-import React from 'react'
+// Componenti
 import { Section } from './../UI/Section';
+import { Title } from './../UI/Title';
+//Style 
+import classes from './scss/SelectingList.module.scss'
 
 const techs = [
     {id: 0, nome: 'Tutti'},
@@ -17,18 +20,21 @@ const SelectingList = ({ selectedTech }) => {
     }
 
     return (
-        <Section className='flex gap-4'>
-            <div>
-                Filtra per tecnologia
-            </div>
-            <div>
+        <Section className={classes.sel_section}>
+            <Title 
+                className={classes.sel_title} 
+                text='Filtra per tecnologia:'
+            />
+                
+            <div >
                 <select
+                    className={classes.sel_select}
                     onChange={select}
                 >
                     {
                         techs.map( item => {
                             return (
-                            <option 
+                            <option
                                 key={item.id}
                                 value={item.id}
                             >

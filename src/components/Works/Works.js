@@ -1,7 +1,7 @@
 // Hooks
 import { useState, useEffect } from "react"
 // Componenti
-import WorkCard from './WorkCard';
+import WorkCard from './WorkCard/WorkCard';
 import Pagination from "./Pagination";
 import { Section } from './../UI/Section';
 import { Container } from './../UI/Container';

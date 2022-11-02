@@ -1,6 +1,6 @@
 
-import { Paragraph } from './../UI/Paragraph';
-import { Title } from './../UI/Title';
+import { Paragraph } from '../../UI/Paragraph';
+import { Title } from '../../UI/Title';
 
 const WorkText = props => {
     return (

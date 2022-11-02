@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Link } from '../UI/Link'
+import { Link } from '../../UI/Link'
 
 const WorkLinks = props => {
     return (

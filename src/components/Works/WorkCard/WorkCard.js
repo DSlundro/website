@@ -1,9 +1,9 @@
 // Style
 import classes from './scss/WorksCard.module.scss'
 // Componenti
-import { Image } from './../UI/Image';
+import { Image } from '../../UI/Image';
 import WorkOverlay from './WorkOverlay';
-import placeholder from '../../assets/placeholder.jpg';
+import placeholder from '../../../assets/placeholder.jpg';
 
 
 const WorkCard = props => {
