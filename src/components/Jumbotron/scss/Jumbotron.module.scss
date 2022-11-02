@@ -5,57 +5,52 @@
 @layer components {
     .jumbotron {
         @apply min-h-screen 
-        bg-[url('../../../assets/bg.jpg')] bg-cover  bg-no-repeat bg-fixed bg-top;
+        bg-[url('../../../assets/bg.jpg')] bg-cover  bg-no-repeat bg-fixed bg-top #{!important};
 
         *{
-            @apply flex justify-center items-center text-white text-center;
-            padding: 8px!important;
+            @apply flex justify-center items-center p-2 text-white text-center #{!important};
         }
         
         .ui_container {
-            @apply h-screen;
+            @apply h-screen #{!important};
 
             .ui_row {
-                @apply flex-col z-50;
+                @apply flex-col z-50 #{!important};
             }
         }
     }
 
     .avatar {
-        padding: 5px !important;
-        @apply w-44 rounded-full 
+        @apply w-44 p-[5px] rounded-full 
         border-white border-solid border-[5px]
-        hover:border-secondary;
-
+        hover:border-secondary #{!important};
     }
     
     .name {
-        @apply text-secondary font-bold text-[48px] leading-tight;
+        @apply text-secondary font-bold text-[48px] leading-tight #{!important};
     }
 
     .title {
-        @apply text-base mt-[-30px];
+        @apply text-base mt-[-30px] #{!important};
     }
 
     .particelle {
-        padding: 0 !important;
-        @apply absolute h-screen min-w-full;
+        @apply p-0 absolute h-screen min-w-full #{!important};
     }
 
     .socials {
-        *{padding: 0!important;}
         .link{
-            @apply text-xl mx-3 mt-5;
+            @apply p-0 text-xl mx-3 mt-5 #{!important};
 
             &:hover path{
-                @apply hover:text-secondary;
+                @apply hover:text-secondary #{!important};
             }
         }
     }
 
     .scroll_arrow{
-        @apply absolute bottom-8 text-5xl;
         animation: up-down 2s forwards ease-in-out infinite;
+        @apply absolute bottom-8 text-5xl #{!important};
     }
     
     @keyframes up-down {

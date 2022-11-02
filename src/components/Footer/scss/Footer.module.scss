@@ -3,25 +3,26 @@
 
 @layer components {
     .footer_section {
-        @apply bg-primary md:py-16;
+        @apply bg-primary md:py-16 #{!important};
 
-        .footer_row {
-            flex-direction: column!important;
-            @apply md:gap-5 md:justify-center md:items-center;
+        .footer_row { 
+            @apply flex-col md:gap-5 md:justify-center md:items-center #{!important};
 
             .footer_socials {
                 @apply flex justify-center items-center gap-[10%] 
-                md:gap-[50px];
+                md:gap-[50px] #{!important};
 
                 .footer_icon {
                     @apply text-white w-6 h-6
-                    hover:text-secondary hover:translate-y-[-10px] duration-300 ease-in;
+                    hover:text-secondary hover:translate-y-[-10px] duration-300 ease-in #{!important};
                 }
 
             }
+            
             .footer_copyright {
                 @apply flex flex-col justify-center items-center gap-3
-                md:flex-row md:gap-[40px];
+                md:flex-row md:gap-[40px] #{!important};
+            
             }
         }
     }

@@ -5,14 +5,14 @@
     .sel_section {
         @apply self-start px-3 flex flex-col gap-3 mb-4
         md:self-center md:flex-row md:items-center
-        md:gap-[175px] lg:gap-[310px];
+        md:gap-[175px] lg:gap-[310px] #{!important};
 
         .sel_title {
-            @apply flex flex-col font-bold text-2xl m-0;
+            @apply flex flex-col font-bold text-2xl m-0 #{!important};
         }
     
         .sel_select {
-            @apply p-2 rounded-lg bg-white border-primary text-primary font-semibold;
+            @apply p-2 rounded-lg bg-white border-primary text-primary font-semibold #{!important};
         }
     }
 }
