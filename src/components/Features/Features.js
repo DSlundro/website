@@ -21,15 +21,17 @@ const Features = () => {
     return (
         <Section id='servizi' className={classes.features}>
             <AnimationOnScroll
-                animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+                animateIn='scroll_animation'
                 animateOnce={true}
             >
-            <Container>
-                <Row>
-                    <Column className={classes.features_text}>
+            <Container className={classes.features_container}>
+                <Row className={classes.features_row}>
+                    <Column className={classes.features_title}>
                         <Title
                             text='La migliore creatività è il risultato di buone abitudini lavorative.'
                         />
+                    </Column>
+                    <Column className={classes.features_text}>
                         <FeaturesCard data={features}/>
                     </Column>
 

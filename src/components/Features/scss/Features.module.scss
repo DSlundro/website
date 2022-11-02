@@ -1,21 +1,33 @@
-@import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 @layer components {
     .features {
-    @apply bg-gray-100 md:py-24;
-        .features_text{
-            @apply text-center order-2 md:order-1
-            md:w-1/2 md:px-6;
-            p{@apply text-center
-                md:pr-6 md:text-left;
+    @apply bg-gray-100 md:py-24 #{!important};
+
+        .features_container {
+            @apply translate-y-6 #{!important};
+
+            .features_row {
+                @apply flex items-center #{!important};
+
+                .features_title {
+                    @apply self-start max-w-2xl pr-4 #{!important};
+                }
+
+                .features_text{
+                    @apply text-center order-2 md:order-1
+                    md:w-1/2 md:px-6  #{!important};
+                    p{@apply text-center
+                        md:pr-6 md:text-left #{!important};
+                    }
+                }
+
+                .features_image{
+                    @apply p-0 m-0 flex items-center justify-center 
+                    md:w-1/2 md:px-6
+                    order-1 md:order-2 #{!important};
+                }
             }
-        }
-        .features_image{
-            @apply p-0 m-0 flex items-center justify-center 
-            md:w-1/2 md:px-6
-            order-1 md:order-2;
         }
     }
 }
