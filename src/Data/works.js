@@ -239,6 +239,6 @@ export const worksList = [
         tech_id: techs.react,
         techs: `HTML, CSS, JavaScript, Sass, Tailwind, React`,
         linkGithub: null,
-        linkWeb: null,
+        linkWeb: 'https://dslundro-website.netlify.app/',
     },
 ]
