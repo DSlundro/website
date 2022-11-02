@@ -5,7 +5,7 @@ import { GoogleMap, useLoadScript, } from "@react-google-maps/api";
 const Map = () => {
     const center = useMemo(() => ({lat: 45.94088, lng: 13.62167,}), [])
     const {isLoaded} = useLoadScript({
-        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+        googleMapsApiKey: 'AIzaSyBn-q0VMtMOum5A7HVG86duHeJApbVDv7o'
     })
     if(!isLoaded) return <div>Loading...</div>
 
