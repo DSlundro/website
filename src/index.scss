@@ -12,4 +12,8 @@
     .flex-center {
         @apply flex justify-center items-center;
     }
+
+    .scroll_animation {
+        @apply -translate-y-6 transition-all duration-500;
+    }
 }
