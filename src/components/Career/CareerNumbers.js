@@ -1,14 +1,13 @@
+// Componenti UI
 import { Title } from './../UI/Title';
+// Componenti esterni
 import CountUp from 'react-countup'
-
 
 
 const CareerNumbers = props => {
     return (
-        <div className='flex-center py-3'>
-            <Title 
-                className='!m-0 !my-2 text-white'
-            >
+        <div className={props.classes.card_ele_container}>
+            <Title className={props.classes.card_number}>
                 <CountUp 
                     end={props.number} 
                     duration={3} 

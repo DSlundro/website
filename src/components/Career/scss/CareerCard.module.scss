@@ -1,0 +1,29 @@
+@import "tailwindcss/components";
+
+@layer components {
+
+    .career_card {
+        @apply py-6 w-full h-full flex-col justify-start items-start #{!important};
+
+        .card_ele_container {
+            @apply flex justify-center items-center #{!important};
+
+            .card_icon {
+                @apply w-10 h-10 p-4 mb-4 border border-solid rounded-full 
+                duration-500 cursor-pointer border-white text-white #{!important};
+                &:hover {
+                    @apply translate-y-[-20px] bg-secondary border-primary #{!important};
+                }
+            }
+
+            .card_number {
+                @apply m-0 my-2 text-white #{!important};
+            }
+
+            .card_name {
+                @apply text-white text-center #{!important};
+            }
+
+        }
+    }
+}

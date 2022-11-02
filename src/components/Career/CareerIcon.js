@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classes from './scss/CareerIcon.module.scss'
+
 
 const CareerIcon = props => {
     return (
-        <div className='flex-center'>
+        <div className={props.classes.card_ele_container}>
             <FontAwesomeIcon
-                className={classes.career_icon}
+                className={props.classes.card_icon}
                 icon={props.icon}
             />
         </div>

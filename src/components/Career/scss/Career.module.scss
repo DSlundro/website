@@ -4,13 +4,25 @@
 @layer components {
     .career_section {
         @apply bg-[url('../../../assets/bg.jpg')] bg-cover bg-top bg-no-repeat bg-fixed relative
-        md:py-32;
-        
-        .career_column {
-            @apply flex flex-col justify-between w-full 
-            md:flex-row md:items-center
-            ;
+        md:py-32 #{!important};
+
+        .career_overlay {
+            @apply absolute top-0 h-full z-0 #{!important};
         }
+
+        .career_container {
+            @apply z-10 relative translate-y-6 #{!important};
+
+            .career_row {
+                @apply flex #{!important};
+
+                .career_column {
+                    @apply flex flex-col justify-between w-full 
+                    md:flex-row md:items-center #{!important};
+                }
+            }
+        }
+        
     }
     
 }

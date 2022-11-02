@@ -1,10 +1,12 @@
+// Componenti UI
 import { SubTitle } from './../UI/SubTitle';
+
 
 const CareerName = props => {
     return (
-        <div className='flex-center'>
+        <div className={props.classes.card_ele_container}>
             <SubTitle 
-                className='!text-white text-center'
+                className={props.classes.card_name}
                 text={props.name}
             />
         </div>
