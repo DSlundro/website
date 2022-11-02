@@ -15,7 +15,8 @@
                 md:hidden #{!important};
             }
             .nav_ul {
-                @apply absolute transition-all duration-500 ease-in opacity-0 bg-transparent z-[-1] w-full left-0 pl-9
+                opacity: 0;
+                @apply absolute transition-all duration-500 ease-in bg-transparent z-[-1] w-full left-0 pl-9
                 md:flex md:items-center md:pb-0 md:static md:z-auto md:w-auto md:pl-0 md:opacity-100 #{!important};
 
                 .nav_li {
@@ -23,7 +24,7 @@
                     md:ml-8 md:my-0 #{!important};
 
                     .nav_link {
-                        @apply text-white no-underline #{!important};
+                        @apply no-underline #{!important};
                     }
                 }
             }

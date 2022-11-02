@@ -36,7 +36,6 @@ const Navbar = props => {
         }
     },[scrollPosition])
     
-    
     const [screenPosition, setScreenPosition] = useState(0)
     useEffect(() => {
         const handlerScreenPosition = () => {
@@ -50,14 +49,14 @@ const Navbar = props => {
         }
     },[screenPosition])
     
-
+console.log(open);
     return (
         <>
             {
                 open && <Overlay onClick={onMenuClose}/>
             }
             <section className={`
-            ${scrollPosition > screenPosition  ? 'md:bg-white md:shadow-md' : ''}
+            ${scrollPosition > screenPosition  ? 'md:!bg-white md:!shadow-md' : ''}
             ${classes.nav_section}`}>
                 <nav className={classes.nav_navbar}>
                     <div 
@@ -65,7 +64,7 @@ const Navbar = props => {
                         className={classes.nav_icon}>
                         <span >
                         <FontAwesomeIcon
-                            className={`${open ? '!text-white' : (scrollPosition > screenPosition ? '!text-black' : 'text-white')}`}
+                            className={`${open ? '!text-white' : (scrollPosition > screenPosition ? '!text-black' : '!text-white')}`}
                             onClick={onMenuToggle}
                             icon={open ? faXmark : faBars}
                         />
@@ -83,9 +82,7 @@ const Navbar = props => {
                                     >
                                         <a 
                                             href={link.link} 
-                                            className={`
-                                            ${scrollPosition > screenPosition ? 'md:!text-primary' : 'md:!text-white'}
-                                            ${classes.nav_link}`}
+                                            className={`${scrollPosition > screenPosition ? '!text-primary' : '!text-white'} ${classes.nav_link}`}
                                         >
                                             {link.name}
                                         </a>
