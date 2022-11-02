@@ -13,19 +13,17 @@ import { links } from "../../Data/navbar";
 
 const Navbar = props => {
     const [open, setOpen] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0)
+
+
     const onMenuClose = () => {
-        if (open) {
-            setOpen(false)
-        }else {
-            return;
-        }
+        if (open) return setOpen(false)
     }
     const onMenuToggle = () => {
         open ? setOpen(false) : setOpen(true)
     }
 
 
-    const [scrollPosition, setScrollPosition] = useState(0)
     useEffect(() => {
         const handlerScrollPosition = () => {
             const position = window.scrollY + 190;
