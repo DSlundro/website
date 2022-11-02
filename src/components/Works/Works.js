@@ -1,15 +1,18 @@
 // Hooks
 import { useState, useEffect } from "react"
-// Componenti
-import WorkCard from './WorkCard/WorkCard';
-import Pagination from "./Pagination";
+// Componenti UI
 import { Section } from './../UI/Section';
 import { Container } from './../UI/Container';
 import { Row } from './../UI/Row';
 import { Title } from "../UI/Title";
+// Componenti
+import WorkCard from './WorkCard/WorkCard';
+import Pagination from "./Pagination";
 import SelectingList from "./SelectingList";
 // Data
 import { worksList } from '../../Data/works';
+// Style
+import classes from './scss/Works.module.scss'
 
 
 const Works = () => {
@@ -49,9 +52,9 @@ const Works = () => {
     return (
         <Section id='progetti'>
             <Container>
-                <Row className='md:!p-24 px-4 flex !flex-col items-center justify-center gap-4 min-h-min'>
+                <Row className={classes.works_row}>
                     <Title
-                        className='pb-7 !text-[46px] uppercase'
+                        className={classes.works_title}
                         text='Progetti'
                     />
                     <SelectingList

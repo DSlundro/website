@@ -1,0 +1,12 @@
+@import "tailwindcss/components";
+
+@layer components {
+    
+    .works_row {
+        @apply md:p-24 px-4 flex flex-col items-center justify-center gap-4 min-h-min #{!important};
+
+        .works_title {
+            @apply pb-7 text-[46px] uppercase #{!important};
+        }
+    }
+}

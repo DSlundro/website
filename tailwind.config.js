@@ -5,7 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
       colors: {
         primary: '#333333',
         secondary: '#2f3dff',
@@ -21,5 +20,7 @@ module.exports = {
   plugins: [],
   corePlugins:{
     preflight: false
-  }
+  },
+  important: true,
+  
 }
