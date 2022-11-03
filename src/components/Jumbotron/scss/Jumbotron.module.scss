@@ -21,17 +21,23 @@
     }
 
     .avatar {
-        @apply w-44 p-[5px] rounded-full 
+        @apply p-[5px] rounded-full 
         border-white border-solid border-[5px]
-        hover:border-secondary #{!important};
+        hover:border-secondary 
+        w-[50%] max-w-[300px] md:max-w-[370px]
+        #{!important};
     }
     
     .name {
-        @apply text-secondary font-bold text-[48px] leading-tight #{!important};
+        @apply text-secondary font-bold leading-tight 
+        text-[36px] md:text-[44px] 
+        #{!important};
     }
 
     .title {
-        @apply text-base mt-[-30px] #{!important};
+        @apply text-base mt-[-30px] 
+        text-[16px] md:text-[22px]
+        #{!important};
     }
 
     .particelle {
@@ -40,7 +46,7 @@
 
     .socials {
         .link{
-            @apply p-0 text-xl mx-3 mt-5 #{!important};
+            @apply p-0 text-xl mx-1 md:mx-3 mt-5 #{!important};
 
             &:hover path{
                 @apply hover:text-secondary #{!important};
@@ -50,7 +56,7 @@
 
     .scroll_arrow{
         animation: up-down 2s forwards ease-in-out infinite;
-        @apply absolute bottom-8 text-5xl #{!important};
+        @apply absolute bottom-0 text-5xl #{!important};
     }
     
     @keyframes up-down {
