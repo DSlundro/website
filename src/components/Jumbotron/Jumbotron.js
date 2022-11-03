@@ -25,8 +25,8 @@ const Jumbotron = props => {
                     <Name classes={classes}/>
                     <Title classes={classes}/>
                     <Socials classes={classes}/>
-                    <ScrollArrow classes={classes}/>
                 </Row>
+                <ScrollArrow classes={classes}/>
             </Container>
         </Section>
     )

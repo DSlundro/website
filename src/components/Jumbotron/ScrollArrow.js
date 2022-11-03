@@ -5,7 +5,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const ScrollArrow = props => {
     return (
-        <Column>
+        <Column className={props.classes.scroll_arrow_container}>
             <a href="#info">
                 <FontAwesomeIcon
                     className={props.classes.scroll_arrow}

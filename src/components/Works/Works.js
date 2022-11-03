@@ -53,7 +53,7 @@ const Works = () => {
     return (
         <Section id='progetti'>
                 <AnimationOnScroll
-                    animateIn='opacity-1 -translate-y-6 transition-all duration-700'
+                    animateIn='scroll_animation'
                     animateOnce={true}
                 >
                 <Container>

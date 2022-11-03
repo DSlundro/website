@@ -14,6 +14,6 @@
     }
 
     .scroll_animation {
-        @apply translate-y-0 transition-all duration-500;
+        @apply -translate-y-[500px] transition-all duration-500;
     }
 }

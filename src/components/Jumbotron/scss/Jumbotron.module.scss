@@ -5,14 +5,14 @@
 @layer components {
     .jumbotron {
         @apply min-h-screen 
-        bg-[url('../../../assets/bg.jpg')] bg-cover  bg-no-repeat bg-fixed bg-top #{!important};
+        bg-[url('../../../assets/bg.jpg')] bg-cover bg-no-repeat bg-fixed bg-top #{!important};
 
         *{
             @apply flex justify-center items-center p-2 text-white text-center #{!important};
         }
         
         .ui_container {
-            @apply h-screen #{!important};
+            @apply h-screen flex flex-col #{!important};
 
             .ui_row {
                 @apply flex-col z-50 #{!important};
@@ -54,21 +54,25 @@
         }
     }
 
-    .scroll_arrow{
-        animation: up-down 2s forwards ease-in-out infinite;
-        @apply absolute bottom-0 text-5xl #{!important};
-    }
-    
-    @keyframes up-down {
-        0% {
-            transform: translateY(-50px)scale(1);
-            opacity: 1;
+    .scroll_arrow_container {
+        @apply relative flex justify-center items-center h-[5%];
+
+        .scroll_arrow{
+            animation: up-down 2s forwards ease-in-out infinite;
+            @apply absolute -bottom-[104px]  text-5xl #{!important};
+        }
+        
+        @keyframes up-down {
+            0% {
+                transform: translateY(-50px)scale(1);
+                opacity: 1;
+                }
+                
+            100% {
+                transform: translateY(0px)scale(1.2);
+                opacity: 0.0
+                
             }
-            
-        100% {
-            transform: translateY(0px)scale(1.2);
-            opacity: 0.0
-            
         }
     }
 }

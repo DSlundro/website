@@ -11,7 +11,7 @@
         }
 
         .career_container {
-            @apply z-10 relative translate-y-6 #{!important};
+            @apply z-10 relative translate-y-[500px] #{!important};
 
             .career_row {
                 @apply flex #{!important};
