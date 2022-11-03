@@ -24,7 +24,8 @@
                     md:ml-8 md:my-0 #{!important};
 
                     .nav_link {
-                        @apply text-white no-underline #{!important};
+                        color: white;
+                        @apply no-underline #{!important};
                     }
                 }
             }
