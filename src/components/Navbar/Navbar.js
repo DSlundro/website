@@ -49,14 +49,14 @@ const Navbar = props => {
         }
     },[screenPosition])
     
-console.log(open);
+
     return (
         <>
             {
                 open && <Overlay onClick={onMenuClose}/>
             }
             <section className={`
-            ${scrollPosition > screenPosition  ? 'md:!bg-white md:!shadow-md' : ''}
+            ${scrollPosition > screenPosition  ? 'md:!bg-white md:!shadow-2xl' : ''}
             ${classes.nav_section}`}>
                 <nav className={classes.nav_navbar}>
                     <div 
@@ -64,7 +64,7 @@ console.log(open);
                         className={classes.nav_icon}>
                         <span >
                         <FontAwesomeIcon
-                            className={`${open ? '!text-white' : (scrollPosition > screenPosition ? '!text-black' : '!text-white')}`}
+                            className={`${open ? '!text-white' : (scrollPosition > screenPosition ? 'md:!text-black' : 'md:!text-white')}`}
                             onClick={onMenuToggle}
                             icon={open ? faXmark : faBars}
                         />
@@ -82,7 +82,7 @@ console.log(open);
                                     >
                                         <a 
                                             href={link.link} 
-                                            className={`${scrollPosition > screenPosition ? '!text-primary' : '!text-white'} ${classes.nav_link}`}
+                                            className={`${scrollPosition > screenPosition ? 'text-white md:text-primary' : 'text-white'} ${classes.nav_link}`}
                                         >
                                             {link.name}
                                         </a>
