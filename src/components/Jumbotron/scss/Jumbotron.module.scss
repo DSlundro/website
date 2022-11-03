@@ -55,7 +55,7 @@
     }
 
     .scroll_arrow_container {
-        @apply relative flex justify-center items-center h-[5%];
+        @apply relative flex justify-center items-center h-[5%] #{!important};
 
         .scroll_arrow{
             animation: up-down 2s forwards ease-in-out infinite;

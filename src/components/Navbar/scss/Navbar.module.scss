@@ -2,10 +2,10 @@
 
 @layer components {
     .nav_section {
+        @apply md:bg-[#00000048];
         @apply w-full fixed top-0 z-[99999] container px-12 max-w-7xl
         md:right-1/2 md:translate-x-[50%]
         xl:rounded-bl-[50px] xl:rounded-br-[50px] #{!important};
-        @apply md:bg-[#00000048];
 
         .nav_navbar {
             @apply p-4
