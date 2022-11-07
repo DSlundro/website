@@ -2,7 +2,7 @@ import classes from './scss/Pagination.module.scss'
 import { useState, useEffect } from 'react';
 
 
-const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
+const Pagination = ({ worksPerPage, currentPage, totalWorks, paginate }) => {
     const [isActive, setIsActive] = useState(0);
     const [pages, setPages] = useState();
 
@@ -13,7 +13,11 @@ const Pagination = ({ worksPerPage, totalWorks, paginate }) => {
 
     // Set active class
     const setActiveHandler = index => {
-        if(isActive === index) return '!text-white !bg-black';
+        if(currentPage === 1 && index === 0) {
+            return '!text-white !bg-black'
+        } else if (isActive === index && currentPage !== 1 ) {
+            return '!text-white !bg-black'
+        } 
     }
     
     // Get numbers on pages

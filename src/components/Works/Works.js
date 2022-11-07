@@ -27,6 +27,12 @@ const Works = () => {
     const indexOfLastWork = currentPage * worksPerPage;
     const indexOfFirstPost = indexOfLastWork - worksPerPage;
 
+
+    // Reset curent page on changing tech
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [selectedTech])
+
     // Get all works
     useEffect(() => {
         const filteredWorks = worksList.filter( work => work.tech_id === selectedTech)
@@ -70,6 +76,7 @@ const Works = () => {
                         />
                         <Pagination 
                             worksPerPage={worksPerPage}
+                            currentPage={currentPage}
                             totalWorks={totalWorks}
                             paginate={paginate}
                         />
