@@ -11,7 +11,11 @@
                 @apply flex items-center #{!important};
 
                 .features_title {
-                    @apply self-start max-w-2xl pr-4 #{!important};
+                    @apply  w-full text-center pb-7 uppercase #{!important};
+
+                    h3 {
+                        @apply text-[46px] #{!important};
+                    }
                 }
 
                 .features_text{

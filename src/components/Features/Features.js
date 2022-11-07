@@ -1,7 +1,7 @@
 // Style
 import classes from './scss/Features.module.scss';
 // Immagine
-import responsive from '../../assets/responsive.jpg';
+import responsive from '../../assets/responsive.png';
 // Componenti UI
 import { Section } from './../UI/Section';
 import { Container } from './../UI/Container';
@@ -28,7 +28,7 @@ const Features = () => {
                 <Row className={classes.features_row}>
                     <Column className={classes.features_title}>
                         <Title
-                            text='La migliore creatività è il risultato di buone abitudini lavorative.'
+                            text='Servizi'
                         />
                     </Column>
                     <Column className={classes.features_text}>

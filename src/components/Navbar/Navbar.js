@@ -71,7 +71,7 @@ const Navbar = props => {
 
                         </span>
                     </div>
-                    <ul className={`${open ? '!top-20 !opacity-100' : '!top-[-250px]'} ${classes.nav_ul}`}>
+                    <ul className={`${open ? '!top-20 !block' : '!top-[-250px]'} ${classes.nav_ul}`}>
                         {
                             links.map( link => {
                                 return (
